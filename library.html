@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <nav class="navbar">
+        <img src="Images/logo.jpg">
+        <h1>Library Management System</h1>
+        <button id="btn">Sign In</button>
+    </nav>
+    <div class="overlay"></div>
+    <div class="popup hidden">
+        <h3>Username :</h3>
+        <input type="text">
+        <h3>Password :</h3>
+        <input type="text">
+        <button class="close">Sign In</button>
+    </div>
+    <div class="member">
+        <h1>Member Details</h1>
+        <div class="mem">
+        <h2><a href="memberlist.html">Member List</a></h2>
+        <h2><a href="addmember.html">Add Member</a></h2>
+        <h2><a href="removemember.html">Remove Member</a></h2>
+        <h2><a href="editmember.html">Edit Member</a></h2>
+    </div>
+    </div>
+
+    <div class="book">
+        <h1>Book Details</h1>
+        <div class="bok">
+        <h2><a href="booklist.html">Book List</a></h2>
+        <h2><a href="addbook.html">Add Book</a></h2>
+        <h2><a href="removebook.html">Remove Book</a></h2>
+        <h2><a href="editbook.html">Edit Book</a></h2>
+    </div>
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+    var popup= document.querySelector(".popup")
+    var btn=document.getElementById("btn")
+    var close=document.querySelector(".close")
+    var overlay=document.querySelector(".overlay")
+
+    btn.addEventListener("click",function(){
+        popup.classList.remove("hidden")
+        overlay.style.display="block"
+    })
+    close.addEventListener("click",function(){
+        popup.classList.add("hidden")
+        overlay.style.display="none"
+    })
+
+    
+</script>
